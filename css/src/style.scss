@@ -1,0 +1,355 @@
+@import "_fonts.scss";
+@import "_variables.scss";
+
+
+body{
+
+}
+
+.ba-header {
+	font-family: $font-roboto;
+	font-weight: 900;
+	text-align: center;
+
+	&__title {
+		text-transform: uppercase;
+		color: $color-main;
+		font-size: 60px;
+		line-height: 1.1;
+		margin: 100px 0;
+		position: relative;
+
+		&:first-line {
+			font-size: 18px;
+			font-family: $font-raleway;
+			line-height: 24px;
+			font-weight: 500;
+			color: #898f8f;
+			letter-spacing: .02em;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			height: 1px;
+			width: 450px;
+			background-color: $color-main;
+			left: 50%;
+			bottom: -50px;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+
+		&:before {
+			content: "";
+			width: 30px;
+			height: 19px;
+			background: #fff url(../img/bonfireicon.png) no-repeat 50%;
+			color: $color-main;
+			left: 50%;
+			position: absolute;
+			bottom: -50px;
+			-webkit-transform: translate(-50%, 50%);
+			   -moz-transform: translate(-50%, 50%);
+			    -ms-transform: translate(-50%, 50%);
+			     -o-transform: translate(-50%, 50%);
+			        transform: translate(-50%, 50%);
+			z-index: 2;
+		}
+	}
+}
+
+.ba-slider{
+	position: relative;
+	margin-bottom: 100px;
+
+	&__arrows{
+
+	}
+
+	&__arrow{
+		position: absolute;
+		top: 50%;
+		margin-top: -12px;
+		width: 13px;
+		height: 23px;
+
+		&--left{
+			background: url(../img/left.png) 50% no-repeat;
+			left: 20px;
+		}
+
+		&--right{
+			background: url(../img/right.png) 50% no-repeat;
+			right: 20px;
+		}
+	}
+
+	&__dots{
+		text-align: center;
+		padding: 0;
+		margin-top: 30px;
+
+		&-item{
+			border-radius: 50%;
+			background-color: $color-main;
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			border: 1px solid $color-main;
+			margin-left: 5px;
+			cursor: pointer;
+
+			&:hover{
+				background-color: #FFF;
+			}
+
+			&:first-child{
+				margin-left: 0;
+			}
+
+			&--active{
+				background-color: #FFF;
+			}
+		}
+	}
+
+}
+
+.ba-card{
+	position: relative;
+
+
+
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		left: 50%;
+		background-color: $color-main;
+	}
+
+	&__photo-container{
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+		border: 1px solid $color-main;
+		overflow: hidden;
+
+		img{
+			min-width: 100px;
+			min-height: 100%;
+			-webkit-transition: transform ease .3s;
+			   -moz-transition: transform ease .3s;
+			    -ms-transition: transform ease .3s;
+			     -o-transition: transform ease .3s;
+			        transition: transform ease .3s;
+
+			&:hover{
+				-webkit-transform: scale(1.1);
+				   -moz-transform: scale(1.1);
+				    -ms-transform: scale(1.1);
+				     -o-transform: scale(1.1);
+				        transform: scale(1.1);
+			}
+		}
+	}
+
+	&__photo{
+		width: 50%;
+		float: left;
+		padding: 9px;
+
+		background: #fff url(../img/imageborder.png) 50% no-repeat;
+
+		min-height: 200px;
+	}
+
+	&__info{
+		width: 50%;
+		float: left;
+		min-height: 200px;
+		text-align: center;
+
+		&-name{
+			font-family: $font-roboto;
+			color: #666666;
+			font-size: 36px;
+			font-weight: 900;
+			line-height: 24px;
+			text-align: center;
+			position: relative;
+			padding-bottom: 35px;
+			margin-bottom: 35px;
+
+			&:after{
+				content: "";
+				display: block;
+				position: absolute;
+				height: 1px;
+				width: 100px;
+				background-color: $color-main;
+				left: 50%;
+				bottom: 0;
+				-webkit-transform: translateX(-50%);
+				   -moz-transform: translateX(-50%);
+				    -ms-transform: translateX(-50%);
+				     -o-transform: translateX(-50%);
+				        transform: translateX(-50%);
+			}
+		}
+			&-profession{
+				font-family: $font-raleway;
+				color: #666666;
+				font-size: 24px;
+				font-weight: 400;
+				margin-bottom: 30px;
+		}
+
+		&-social-icons{
+			list-style: none;
+			text-align: center;
+			padding: 0;
+			margin-bottom: 30px;
+
+			&--icon{
+				display: inline-block;
+				padding-left: 5px;
+
+				&:first-child{
+					padding-left: 0;
+				}
+
+				a{
+					color: #cccccc;
+					font-size: 14px;
+					font-weight: 400;
+					border-radius: 50%;
+					border: 2px solid #cccccc;
+					width: 26px;
+					height: 26px;
+					display: inline-block;
+					padding: 4px 0;
+					cursor: pointer;
+
+					&:hover{
+						background-color: $color-main;
+					}
+				}
+
+			}
+
+		}
+
+		&-personal-info{
+			font-family: $font-raleway;
+			color: #333333;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 24px;
+			width: 416px;
+			margin: 0 auto;
+			position: relative;
+			padding-bottom: 20px;
+
+			&:after{
+				content: "";
+				background: url(../img/boxes.png) no-repeat;
+				position: absolute;
+				width: 50px;
+				height: 4px;
+				bottom: 0;
+    			left: 50%;
+    			margin-left: -25px;
+			}
+		}
+
+		&-button{
+			text-transform: uppercase;
+			font-family: OpenSans;
+			color: #666666;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 24px;
+			border: 1px solid $color-main;
+			padding: 0 10px;
+			margin-top: 20px;
+			display: inline-block;
+			cursor: pointer;
+
+			&:hover{
+				background-color: $color-main;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
